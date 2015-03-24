@@ -6,6 +6,17 @@ then
     exit 1
 fi
 
+stat /swapfile2G
+if [ $? -ne 0 ]
+then
+    dd if=/dev/zero of=/swapfile2G bs=1M count=2048
+    mkswap /swapfile2G
+    echo "/swapfile2G                               swap            swap    defaults,swap     0       0" >> /etc/fstab
+    swapon -a
+fi
+
+free -m
+
 apt-get -y update && apt-get -y upgrade && \
 apt-get install -y aptitude wget curl pv \
         htop atop dstat sysstat \
