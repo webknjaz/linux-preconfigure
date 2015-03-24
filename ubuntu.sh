@@ -19,7 +19,8 @@ free -m
 
 apt-get -y update && apt-get -y upgrade && \
 apt-get install -y aptitude wget curl pv \
-        htop atop dstat sysstat \
+        links lynx phantomjs nodejs cron-apt \
+        htop atop dstat sysstat syslog-ng \
         zsh git mercurial vim \
         uwsgi nginx-extras \
         python3-setuptools python-setuptools python-virtualenv \
