@@ -6,7 +6,7 @@ then
     exit 1
 fi
 
-apt-get update && apt-get upgrade && \
+apt-get -y update && apt-get -y upgrade && \
 apt-get install -y aptitude wget curl \
         htop atop dstat sysstat \
         zsh git mercurial vim \
