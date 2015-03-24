@@ -7,7 +7,7 @@ then
 fi
 
 apt-get -y update && apt-get -y upgrade && \
-apt-get install -y aptitude wget curl \
+apt-get install -y aptitude wget curl pv \
         htop atop dstat sysstat \
         zsh git mercurial vim \
         uwsgi nginx-extras \
